@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  width: 100%;
+  max-width: 80em;
+  margin: 0 auto;
+  position: absolute;
+  left: 50px;
+  right: 50px;
+  z-index: 200;
+}
+header nav {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header nav #tel {
+  color: white;
+}
+header nav .logo-wrap .logo {
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  letter-spacing: 2px;
+  line-height: 1.175rem;
+  text-decoration: none;
+  color: white;
+}
+header nav .nav-links-wrap {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+header nav .nav-links-wrap .nav-link-div {
+  width: 90px;
+  padding: 4.5px;
+  position: relative;
+  text-align: center;
+}
+header nav .nav-links-wrap .nav-link-div .nav-link {
+  color: white;
+  text-decoration: none;
+}
+header nav .nav-links-wrap .nav-link-div .nav-link:hover {
+  color: black;
+}
+header nav .nav-links-wrap .nav-link-div::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  top: 27px;
+  left: 10px;
+  border-radius: 20px;
+  display: none;
+  animation-name: sliding_vertically;
+  animation-duration: 0.7s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-direction: alternate-reverse;
+  -webkit-animation-name: sliding_vertically;
+  -webkit-animation-duration: 0.7s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate-reverse;
+  -webkit-animation-timing-function: linear;
+}
+header nav .nav-links-wrap .nav-link-div:hover:after {
+  display: block;
+}
+@keyframes sliding_vertically {
+  0% {
+    left: 10px;
+    width: 20px;
+  }
+  100% {
+    left: 50px;
+    width: 26px;
+  }
+}
+
+main {
+  width: 100%;
+}
+main .first-layer {
+  position: relative;
+  height: 600px;
+  background-image: url("/Nebo Apartment Site/public/images/living-room.jpg");
+  background-position: center;
+  background-size: 100% 600px;
+  background-repeat: no-repeat;
+}
+main .first-layer #inner-text {
+  text-align: center;
+  padding-top: 250px;
+  font-size: 60px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: white;
+}
+main .second-layer {
+  height: 450px;
+  display: flex;
+  background-color: rgb(249, 249, 249);
+  justify-content: space-around;
+}
+main .second-layer .details-wrapper {
+  width: 500px;
+  padding: 3rem;
+}
+main .second-layer .details-wrapper .det-figs {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid grey;
+}
+main .second-layer .details-wrapper .det-figs .desc-wrap h1 {
+  text-align: center;
+}
+main .second-layer .details-wrapper .det-figs .desc-wrap span {
+  font-size: 12px;
+}
+main .second-layer .details-wrapper .detail-wrap {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main .second-layer .details-wrapper .detail-wrap #detail {
+  font-size: 14px;
+}
+main .second-layer .floor-img-wrapper {
+  width: auto;
+  padding-top: 30px;
+}
+main .second-layer .floor-img-wrapper img {
+  width: 500px;
+}
+main .third-layer {
+  padding: 30px;
+}
+main .third-layer .gallery-wrap {
+  max-width: 80em;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 30px;
+}
+main .third-layer .gallery-wrap .col-1, main .third-layer .gallery-wrap .col-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+main .third-layer .gallery-wrap .col-1 .dn-img-wrap {
+  width: 650px;
+  height: 700px;
+}
+main .third-layer .gallery-wrap .col-1 .bd-rm-wrap {
+  width: 650px;
+  height: 350px;
+}
+main .third-layer .gallery-wrap .col-2 {
+  margin-top: -160px;
+}
+main .third-layer .gallery-wrap .col-2 .mantle-wrap {
+  width: 600px;
+  height: 700px;
+}
+main .third-layer .gallery-wrap .col-2 .bth-img-wrap {
+  width: 600px;
+  height: 350px;
+}
+main .fourth-layer {
+  height: 330px;
+}
+main .fourth-layer .newsletter-wrapper {
+  margin: 0 auto;
+  width: 35em;
+}
+main .fourth-layer .newsletter-wrapper h1 {
+  padding: 10px 1rem 0 1rem;
+  font-size: 20px;
+  letter-spacing: 8px;
+  line-height: 1rem;
+}
+main .fourth-layer .newsletter-wrapper .news-form-wrap {
+  padding: 0 1rem;
+}
+main .fourth-layer .newsletter-wrapper .news-form-wrap form #name_in, main .fourth-layer .newsletter-wrapper .news-form-wrap form #email_in {
+  width: 500px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid black;
+}
+main .fourth-layer .newsletter-wrapper .news-form-wrap form #name_in:focus-within {
+  background: white;
+}
+main .fourth-layer .newsletter-wrapper .news-form-wrap form #email_in:focus {
+  background: white;
+}
+main .fourth-layer .newsletter-wrapper .news-form-wrap form .name-input, main .fourth-layer .newsletter-wrapper .news-form-wrap form .email-input, main .fourth-layer .newsletter-wrapper .news-form-wrap form .check-input, main .fourth-layer .newsletter-wrapper .news-form-wrap form .btn-input {
+  width: 500px;
+  margin-top: 30px;
+}
+main .fourth-layer .newsletter-wrapper .news-form-wrap form .btn {
+  padding: 0.5rem;
+  background-color: white;
+  border-color: black;
+}
+
+footer {
+  background-color: rgb(249, 249, 249);
+  margin-top: 50px;
+  height: 50px;
+  padding: 10px;
+}
+footer .copyright > p {
+  text-align: center;
+}
+
+/*# sourceMappingURL=index.css.map */

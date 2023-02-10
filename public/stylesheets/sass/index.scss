@@ -1,0 +1,293 @@
+$white_text: white;
+$black_text: black;
+$font_family:'Open Sans', sans-serif;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $font_family;
+}
+
+header{
+    width: 100%;
+    max-width: 80em;
+    margin: 0 auto;
+    // outline: 2px solid black;
+    position: absolute;
+    left: 50px;
+    right: 50px;
+    z-index: 200;
+
+        nav{
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+                #tel{
+                    color: $white_text;
+                }
+                .logo-wrap{
+                    // outline: 2px solid black;
+                        .logo{
+                            font-family: $font_family;
+                            font-size: 17px;
+                            letter-spacing: 2px;
+                            line-height: 1.175rem;
+                            text-decoration: none;
+                            color: $white_text;
+                        }
+                }
+                .nav-links-wrap{
+                    width: 400px;
+                    // outline: 2px solid black;
+                    display: flex;
+                    justify-content: space-between;
+                        .nav-link-div{
+                            width: 90px;
+                            // outline: 2px solid black;
+                            padding: 4.5px;
+                            position: relative;
+                            text-align: center;
+                                .nav-link{
+                                    color: $white_text;
+                                    text-decoration: none;
+                                }
+                                .nav-link:hover{
+                                    color: $black_text;
+                                }
+                        }
+                        .nav-link-div::after{
+                            content: "";
+                            position: absolute;
+                            width: 20px;
+                            height: 2px;
+                            background-color: $white_text;
+                            top: 27px;
+                            left: 10px;
+                            border-radius: 20px;
+                           display: none;
+                           animation-name: sliding_vertically;
+                           animation-duration: 0.7s;
+                           animation-timing-function: linear;
+                           animation-iteration-count: 1;
+                           animation-direction: alternate-reverse;
+
+                           -webkit-animation-name: sliding_vertically;
+                           -webkit-animation-duration: 0.7s;
+                           -webkit-animation-iteration-count: infinite;
+                           -webkit-animation-direction: alternate-reverse;
+                           -webkit-animation-timing-function: linear;
+                        }
+
+                      
+                        .nav-link-div:hover:after{
+                            display: block;
+                        }
+
+                        @keyframes sliding_vertically {
+                            0%{
+                                left: 10px;
+                                width: 20px;
+                            }
+
+                            100%{
+                                left: 50px;
+                                width: 26px;
+                                
+                            }
+                        }
+                }
+        }
+}
+
+main{
+   width: 100%;
+        .first-layer{
+            position: relative;
+            // background-color: green;
+            // width: 100%;
+            height: 600px;
+            background-image: url("/Nebo Apartment Site/public/images/living-room.jpg"); 
+            background-position: center;
+            background-size: 100% 600px;
+            background-repeat: no-repeat;
+                #inner-text{
+                    text-align: center;
+                    padding-top: 250px;
+                    font-size: 60px;
+                    text-transform: uppercase;
+                    letter-spacing: 5px;
+                    color: $white_text;
+                }
+        }
+
+        .second-layer{
+            // outline: 2px solid black;
+            // width: 100%;
+            height: 450px;
+            display: flex;
+            background-color: rgb(249, 249, 249);
+            justify-content: space-around;
+                .details-wrapper{
+                    // outline: 2px solid black;
+                    width: 500px;
+                    padding: 3rem;
+
+                        .det-figs{
+                            // outline: 2px solid black;
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 5px;
+                            padding-bottom: 15px;
+                            border-bottom: 1px solid grey;
+                                .desc-wrap{
+                                    // outline: 2px solid black;
+                                        h1{
+                                            text-align: center;
+                                        }
+                                        span{
+                                            font-size: 12px;
+                                        }
+                                }
+                        }
+
+                        .detail-wrap{
+                            padding-top: 30px;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                                #detail{
+                                    font-size: 14px;
+                                }
+                        }
+                }
+
+                .floor-img-wrapper{
+                    width: auto;
+                    padding-top: 30px;
+                    // outline: 2px solid black;
+                        img{
+                            width: 500px;
+                        }
+                }
+        }
+        
+
+        .third-layer{
+            // width: 100%;
+            padding: 30px;
+                .gallery-wrap{
+                    max-width: 80em;
+                    margin: 80px auto;
+                    display: flex;
+                    // outline: 2px solid black;
+                //  flex-direction: ;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    gap: 30px;
+                        .col-1, .col-2{
+                            display: flex;
+                            flex-direction: column;
+                            // position: relative;
+                            gap: 30px;
+                                      
+                        }
+                        .col-1{
+                            .dn-img-wrap{
+                                width: 650px;
+                                height: 700px;
+                            }
+                            .bd-rm-wrap{
+                                width: 650px;
+                                height: 350px;
+                            }
+                        }
+
+                        .col-2{
+                            margin-top: -160px;
+                            .mantle-wrap{
+                                // margin-top: 300px;
+                                width: 600px;
+                                height: 700px;
+                            }
+
+                            .bth-img-wrap{
+                                width: 600px;
+                                height: 350px;
+                              
+
+                            }
+                        }
+                       
+                     
+                }
+            
+        }
+
+        .fourth-layer{
+            // width: 100%;
+            // outline: 2px solid black;
+            height: 330px;
+                .newsletter-wrapper{
+                    // outline: 2px solid black;
+                    margin: 0 auto;
+                    width: 35em;
+                        h1{
+                            padding: 10px 1rem 0 1rem;
+                            font-size: 20px;
+                            letter-spacing: 8px;
+                            line-height: 1rem;
+                        }
+                        .news-form-wrap{
+                            padding: 0 1rem;
+                            // outline: 2px solid red;
+                                form{
+                                    #name_in, #email_in{
+                                        width: 500px;
+                                        padding: 10px;
+                                        outline: none;
+                                        border: none;
+                                        border-bottom: 2px solid black;
+                                    }
+                                    #name_in:focus-within{
+                                        background: white;
+                                        
+                                    }
+                                   
+                                    #email_in:focus{
+                                        background: white;
+                                    }
+                                    .name-input, .email-input, .check-input, .btn-input{
+                                        width: 500px;
+                                        // outline: 2px solid black;
+                                        // padding: 1rem;
+                                        margin-top: 30px;
+                                        
+                                    }
+
+                                    .btn{
+                                        // width: ;
+                                        padding: 0.5rem;
+                                        background-color: $white_text;
+                                        border-color: $black_text;
+                                    }
+                                }
+                            
+                        }
+                }
+        }
+}
+
+footer{
+    background-color: rgb(249, 249, 249);
+    margin-top: 50px;
+    height: 50px;
+    padding: 10px;
+    .copyright > p{
+        text-align: center;
+    }
+}
